@@ -341,19 +341,22 @@
             </div>
             <div class="col-12 col-md-3 d-flex flex-column align-items-center">
                 <div>
-                    <img src="huawei-matebook-d16/assets/money.png" alt="Secure Payment Icon" style="height:32px; opacity:.5;">
+                    <img src="huawei-matebook-d16/assets/money.png" alt="Secure Payment Icon"
+                        style="height:32px; opacity:.5;">
                 </div>
                 <span class="fw-semibold">Secure Payment</span>
             </div>
             <div class="col-12 col-md-3 d-flex flex-column align-items-center">
                 <div>
-                    <img src="huawei-matebook-d16/assets/offer.png" alt="Official Service Icon" style="height:32px; opacity:.5;">
+                    <img src="huawei-matebook-d16/assets/offer.png" alt="Official Service Icon"
+                        style="height:32px; opacity:.5;">
                 </div>
                 <span class="fw-semibold">Official Service</span>
             </div>
             <div class="col-12 col-md-3 d-flex flex-column align-items-center">
                 <div>
-                    <img src="huawei-matebook-d16/assets/timing.png" alt="Fast Delivery Icon" style="height:32px; opacity:.5;">
+                    <img src="huawei-matebook-d16/assets/timing.png" alt="Fast Delivery Icon"
+                        style="height:32px; opacity:.5;">
                 </div>
                 <span class="fw-semibold">Fast Delivery</span>
             </div>
@@ -366,8 +369,6 @@
             </a>
         </p>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -405,17 +406,11 @@
                 targetLink.style.fontWeight = '600';
                 targetLink.setAttribute('aria-current', 'page');
             }
-
-            // Click handler: make clicked link active (useful for single-page interactions)
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
-                    // If link navigates away (href not '#'), let browser navigate after setting active.
                     setActiveLink(this);
                 });
             });
-
-            // On load: if a link's href matches the current URL (path or hash), set it active.
-            // Fallback: if none match, keep the first link marked active in the DOM.
             const currentHref = location.pathname + location.hash + location.search;
             let matched = false;
             navLinks.forEach(link => {
@@ -425,8 +420,6 @@
                     matched = true;
                 }
             });
-
-            // If nothing matched, ensure there's exactly one active (prefer existing active or first link)
             if (!matched) {
                 const existingActive = document.querySelector('.navbar-nav .nav-link.active');
                 if (existingActive) {
